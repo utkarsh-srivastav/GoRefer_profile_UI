@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GoRefer</string>
+    <string name="title_feeds">Feeds</string>
+    <string name="title_chats">Chats</string>
+    <string name="title_alerts">Alerts</string>
+    <string name="title_profile">Profile</string>
+    <string name="User_id">UserId: </string>
+    <string name="id">Id: </string>
+    <string name="title">Title: </string>
+    <string name="body">Body: </string>
+
+</resources>

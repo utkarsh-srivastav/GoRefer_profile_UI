@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <LinearLayout
+        android:id="@+id/linear_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="1"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="224dp"
+            android:layout_weight="0.9">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:padding="25dp"
+                android:src="@drawable/user"
+                app:civ_border_color="@color/colorAccent"
+                app:civ_border_overlay="false"
+                app:civ_border_width="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView">
+
+                <Button
+                    android:id="@+id/btnIMF"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/shape"
+                    android:text="Invite More Friends"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="35dp"
+                    android:background="@drawable/shape"
+                    android:text="Other Settings"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButton3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_baseline_edit_24"
+                app:backgroundTint="@android:color/transparent"
+                app:elevation="0dp"
+                app:fabSize="auto"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.833"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+                app:layout_constraintVertical_bias="0.105"
+                app:maxImageSize="50dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:textAllCaps="false"
+            app:tabIndicatorAnimationDuration="300"
+            app:tabIndicatorColor="#FF7129"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorHeight="4dp"
+            app:tabTextAppearance="@style/CustomTextAppearance">
+
+        </com.google.android.material.tabs.TabLayout>
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10">
+
+        </androidx.viewpager.widget.ViewPager>
+
+    </LinearLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/fab_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="70dp"
+        app:fab_addButtonColorNormal="@color/colorPrimary"
+        app:fab_addButtonPlusIconColor="@color/colorAccent"
+        app:fab_addButtonColorPressed="@color/colorPrimary"
+        app:fab_labelStyle="@style/custom_floating_buttons"
+        android:elevation="0dp">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:fab_icon="@drawable/ic_baseline_settings_input_antenna_24"
+            android:background="#FFFFFF"
+            app:fab_title="Looking for"
+            android:id="@+id/lf"
+            app:fab_colorDisabled="#FFFFFF"
+            app:fab_colorPressed="#FFFFFF"
+            app:fab_colorNormal="#FFFFFF"
+            android:elevation="0dp"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:fab_icon="@drawable/ic_baseline_local_offer_24"
+            app:fab_title="Offerings"
+            android:background="#FFFFFF"
+            android:id="@+id/offering"
+            app:fab_colorDisabled="#FFFFFF"
+            app:fab_colorPressed="#FFFFFF"
+            app:fab_colorNormal="#FFFFFF"
+            android:elevation="0dp"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:fab_icon="@drawable/ic_baseline_card_giftcard_24"
+            android:background="#FFFFFF"
+            app:fab_colorDisabled="#FFFFFF"
+            app:fab_colorPressed="#FFFFFF"
+            app:fab_colorNormal="#FFFFFF"
+            app:fab_title="Recommendations"
+            android:id="@+id/recommend"
+            android:elevation="0dp"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+</RelativeLayout>
